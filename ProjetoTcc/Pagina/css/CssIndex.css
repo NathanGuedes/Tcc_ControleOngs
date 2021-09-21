@@ -1,0 +1,19 @@
+.direita, .esquerda{
+    height: 50vh;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .direita, .esquerda{
+        height: 100vh;
+    }
+}
+
+.direita{
+    background-color: #073841;
+
+}
+
+.esquerda{
+    background-color: #052429;
+}

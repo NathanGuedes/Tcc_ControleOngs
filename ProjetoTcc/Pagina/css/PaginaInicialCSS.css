@@ -1,0 +1,53 @@
+.direita, .esquerda{
+    height: 50vh;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .direita, .esquerda{
+        height: 100vh;
+    }
+}
+
+.direita{
+    background-color: #073841;
+
+}
+
+.esquerda{
+    background-color: #052429;
+}
+
+.botao1{
+
+
+	
+width: 100px;
+     height: 50px;
+
+     background-color: #00CED1;
+
+     border-width: 0;
+
+     font-weight: bolder
+
+
+
+}
+
+.botao2{
+
+width: 100px;
+     height: 50px;
+
+	border-width: 0;
+
+
+	background-color: #32CD32;
+
+
+
+
+	font-weight: bolder
+
+}
