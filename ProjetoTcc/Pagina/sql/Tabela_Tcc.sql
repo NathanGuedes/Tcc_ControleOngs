@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Banco de dados: `tabela_tcc`
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `alimentos` (
   `Quant_Ali` int NOT NULL,
   `fk_Instituicao_ID_Inst` int NOT NULL,
   PRIMARY KEY (`Id_Alimento`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `alimentos`
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `cardapio` (
   `Quantidade_Disponivel` int NOT NULL,
   `fk_Instituicao_ID_Inst` int NOT NULL,
   PRIMARY KEY (`Id_Cardapio`)
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `cardapio`
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `depen_usuario` (
   `ID_Responsavel` int NOT NULL,
   `fk_Usuario_ID_Usu` int NOT NULL,
   PRIMARY KEY (`Id_Depen`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `instituicao` (
   `Telefone` varchar(150) NOT NULL,
   `CNPJ` varchar(150) NOT NULL,
   PRIMARY KEY (`ID_Inst`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `instituicao`
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `itens_cardapio` (
   `fk_Cardapio_Id_Cardapio` int NOT NULL,
   `fk_Alimentos_Id_Alimento` int NOT NULL,
   PRIMARY KEY (`Id_Card`)
-) ENGINE=InnoDB AUTO_INCREMENT=258 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=258 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `itens_cardapio`
@@ -327,7 +327,7 @@ CREATE TABLE IF NOT EXISTS `passe` (
   `fk_Cardapio_Id_Cardapio` int NOT NULL,
   `fk_id_usuario` int NOT NULL,
   PRIMARY KEY (`Id_passe`)
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `passe`
@@ -359,7 +359,7 @@ INSERT INTO `passe` (`Id_passe`, `Utilizado`, `Quantidade_Pedida`, `fk_Cardapio_
 DROP TABLE IF EXISTS `retirar`;
 CREATE TABLE IF NOT EXISTS `retirar` (
   `fk_Usuario_ID_Usu` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -380,7 +380,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `Telefone` varchar(150) NOT NULL,
   `CPF` int NOT NULL,
   PRIMARY KEY (`ID_Usu`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
