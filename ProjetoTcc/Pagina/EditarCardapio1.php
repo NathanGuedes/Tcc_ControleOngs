@@ -32,14 +32,14 @@ $row_chamada = mysqli_fetch_assoc($resultado_Chamada);
         <label class="col-md-4 control-label" for="HorarioDeAbertura">Data Do Serviço</label>
         <div class="col-md-4">
 
-          <input type="date" name="adata" id="adata" class="form-control input-md" value="<?php echo $row_chamada['DataCardapio'] ?>" required />
+          <input type="date" name="adata" id="adata" class="form-control input-md" value="<?php echo $row_chamada['DataCardapio']; ?>" required />
         </div>
       </div>
       <!-- Text input-->
       <div class="form-group">
         <label class="col-md-4 control-label" for="HorarioDeAbertura">Horário De Abertura</label>
         <div class="col-md-4">
-          <input id="HorarioDeAbertura" name="HorarioDeAbertura" type="time" placeholder="" value="<?php echo $row_chamada['Hora_de_Abertura_Cardapio'] ?>" class="form-control input-md" required="">
+          <input id="HorarioDeAbertura" name="HorarioDeAbertura" type="time" placeholder="" value="<?php echo $row_chamada['Hora_de_Abertura_Cardapio']; ?>" class="form-control input-md" required="">
 
         </div>
       </div>
@@ -48,7 +48,7 @@ $row_chamada = mysqli_fetch_assoc($resultado_Chamada);
       <div class="form-group">
         <label class="col-md-4 control-label" for="HorarioDeFechamento">Horário De Fechamento</label>
         <div class="col-md-4">
-          <input id="HorarioDeFechamento" name="HorarioDeFechamento" type="time" value="<?php echo $row_chamada['Hora_De_Fechamento_Cardapio'] ?>" class="form-control input-md" required="" />
+          <input id="HorarioDeFechamento" name="HorarioDeFechamento" type="time" value="<?php echo $row_chamada['Hora_De_Fechamento_Cardapio']; ?>" class="form-control input-md" required="" />
 
         </div>
       </div>
@@ -57,7 +57,7 @@ $row_chamada = mysqli_fetch_assoc($resultado_Chamada);
       <div class=" form-group">
         <label class="col-md-4 control-label" for="descricao">Descrição</label>
         <div class="col-md-4">
-          <textarea class="form-control" id="descricao" name="descricao" value=""><?php echo $row_chamada['Descricao'] ?></textarea>
+          <textarea class="form-control" id="descricao" name="descricao" value=""><?php echo $row_chamada['Descricao']; ?></textarea>
         </div>
       </div>
 
@@ -65,13 +65,13 @@ $row_chamada = mysqli_fetch_assoc($resultado_Chamada);
       <div class="form-group">
         <label class="col-md-4 control-label" for="QuantCardapio">Quantidade</label>
         <div class="col-md-4">
-          <input id="QuantCardapio" name="QuantCardapio" type="text" placeholder="" class="form-control input-md" value="<?php echo $row_chamada['Quantidade_Disponivel'] ?>" required="">
+          <input id="QuantCardapio" name="QuantCardapio" type="text" placeholder="" class="form-control input-md" value="<?php echo $row_chamada['Quantidade_Disponivel']; ?>" required="">
 
         </div>
       </div>
 
       <hr>
-      <center><button class="btn btn-success" type="submit">Salvar</button></center>
+      <center><button class="btn btn-success" type="submit">Atualizar</button></center>
     </form>
   </section>
 </body>
