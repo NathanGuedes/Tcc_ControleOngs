@@ -25,9 +25,9 @@ if ($result = mysqli_query($connection, $query)) {
 
 
     if ($par % 2) {
-      echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</td><td align="center"><a href = "PedidoRealizado2.php?codigo=' . $C_Cardapio . '">Editar</a></td></td><td align="center"><a href = "ExcluirCardapio.php?codigo=' . $C_Cardapio . '">Excluir</a></td></tr>');
+      echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</td><td align="center"><a href = "EditarCardapio1.php?codigo=' . $C_Cardapio . '">Editar</a></td></td><td align="center"><a href = "ExcluirCardapio.php?codigo=' . $C_Cardapio . '">Excluir</a></td></tr>');
     } else {
-      echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</td><td align="center"><a href = "PedidoRealizado2.php?codigo=' . $C_Cardapio . '">Editar</a></td><td align="center"><a href = "ExcluirCardapio.php?codigo=' . $C_Cardapio . '">Excluir</a></td></tr>');
+      echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</td><td align="center"><a href = "EditarCardapio1.php?codigo=' . $C_Cardapio . '">Editar</a></td><td align="center"><a href = "ExcluirCardapio.php?codigo=' . $C_Cardapio . '">Excluir</a></td></tr>');
     }
 
     $par = $par + 1;
