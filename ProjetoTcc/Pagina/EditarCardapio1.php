@@ -7,7 +7,6 @@ $result_chamada = "SELECT * FROM cardapio WHERE Id_Cardapio = '$codCard'";
 $resultado_Chamada = mysqli_query($connection, $result_chamada);
 $row_chamada = mysqli_fetch_assoc($resultado_Chamada);
 
-
 ?>
 
 
