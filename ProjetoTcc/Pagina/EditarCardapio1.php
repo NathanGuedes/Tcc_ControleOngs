@@ -65,10 +65,9 @@ $row_chamada = mysqli_fetch_assoc($resultado_Chamada);
         <label class="col-md-4 control-label" for="QuantCardapio">Quantidade</label>
         <div class="col-md-4">
           <input id="QuantCardapio" name="QuantCardapio" type="text" placeholder="" class="form-control input-md" value="<?php echo $row_chamada['Quantidade_Disponivel']; ?>" required="">
-
         </div>
       </div>
-
+        
       <hr>
       <center><button class="btn btn-success" type="submit">Atualizar</button></center>
     </form>
