@@ -36,3 +36,4 @@ if ($result = mysqli_query($connection, $query)) {
 
   mysqli_free_result($result);
 }
+?>
