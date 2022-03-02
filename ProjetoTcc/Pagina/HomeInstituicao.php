@@ -50,6 +50,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="PedidoRealizado.php">Pedidos Realizados</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Relatorios.php">Relatorios</a>
+                </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item dropdown">
