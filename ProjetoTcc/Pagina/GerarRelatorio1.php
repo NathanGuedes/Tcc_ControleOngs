@@ -18,6 +18,7 @@
   <?php
   include("connect.php");
   session_start();
+  $quant_total = 0;
 
   /*
 if ($_SESSION['login']) {
@@ -38,10 +39,10 @@ Usuario: ' .$_SESSION['nome'].' </strong></p>';
       <thead>
         <tr>
           <th style="text-align: center;" scope="col">ID</th>
-          <th style="text-align: center;" scope="col">Nome</th>
-          <th style="text-align: center;" scope="col">Preço</th>
           <th style="text-align: center;" scope="col">Descrição</th>
-          <th style="text-align: center;" scope="col">Estoque</th>
+          <th style="text-align: center;" scope="col">Nome do Solicitante</th>
+          <th style="text-align: center;" scope="col">CPF</th>
+          <th style="text-align: center;" scope="col">Quantidade Pedida</th>
         </tr>
       </thead>
       <tbody>
@@ -59,13 +60,19 @@ Usuario: ' .$_SESSION['nome'].' </strong></p>';
             $cliente = $dados['nome'];
             $cpf = $dados['CPF'];
             $quant = $dados['Quantidade_Pedida'];
+            $quant_total = ($quant_total + $quant);
 
-            echo ('<tr><td align="center">' . $id . '</td><td align="center"><b>' . $descr . '</b></td><td align="center"> R$ ' . $cliente . '</td><td align="center">' . $cpf . '</td><td align="center">' . $quant . '</td></tr>');
+            echo ('<tr><td align="center">' . $id . '</td><td align="center"><b>' . $descr . '</b></td><td align="center"> ' . $cliente . '</td><td align="center">' . $cpf . '</td><td align="center">' . $quant . '</td></tr>');
           }
           mysqli_num_rows($result);
         }
 
 
+        echo '<table class= "table table-striped">
+        <th style= "text-align: center;">Quantidade Total Pedida</th>
+    
+        <tr><td align="center";scope="col";>' . $quant_total . '</td></tr>
+          </table>';
         ?>
       </tbody>
     </table>
