@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <title>Cardápios</title>
+  <title>Meus Pedidos</title>
 </head>
 
 <body>
   <center>
-    <h1>Cardápios</h1>
+    <h1>Meus Pedidos</h1>
   </center>
   <br><br>
   <?php
@@ -26,10 +26,11 @@
 		 <th style="text-align: center;" scope="col">Numero do Cardapio</th>
      <th style="text-align: center;" scope="col">Data Do Cardápio</th>
      <th style="text-align: center;" scope="col">Descrição</th>
+     <th style="text-align: center;" scope="col">Quantidade Pedida</th>
 		
 	    </tr>';
   $par = 1;
-  $query = "SELECT cardapio.Id_Cardapio,cardapio.DataCardapio, cardapio.Descricao from cardapio, passe where passe.fk_id_usuario = $id_usu '";
+  $query = "SELECT cardapio.Id_Cardapio,cardapio.DataCardapio, cardapio.Descricao,passe.fk_Cardapio_Id_Cardapio, passe.Quantidade_Pedida from cardapio, passe where passe.fk_id_usuario = $id_usu and passe.fk_Cardapio_Id_Cardapio=cardapio.Id_Cardapio";
   mysqli_set_charset($connection, 'utf8');
   if ($result = mysqli_query($connection, $query)) {
     while ($dados = mysqli_fetch_assoc($result)) {
@@ -37,13 +38,14 @@
       $C_Cardapio = $dados['Id_Cardapio'];
       $DataServ = $dados['DataCardapio'];
       $descricao = $dados['Descricao'];
+      $quant = $dados['Quantidade_Pedida'];
 
 
 
       if ($par % 2) {
-        echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</tr>');
+        echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</td><td align="center">' . $quant . '</tr>');
       } else {
-        echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao .  '</tr>');
+        echo ('<tr><td align="center">' . $C_Cardapio . '</td><td align="center">' . $DataServ . '</td><td align="center">' . $descricao . '</td><td align="center">' . $quant . '</tr>');
       }
 
       $par = $par + 1;
@@ -52,3 +54,4 @@
 
     mysqli_free_result($result);
   }
+  ?>
