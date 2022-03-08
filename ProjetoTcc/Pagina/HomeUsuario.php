@@ -44,6 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="MeusPedidos.php">Meus Pedidos <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="MeusPedidosDatas.php">Meus Pedidos por Datas <span class="sr-only">(current)</span></a>
+                </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item dropdown">
