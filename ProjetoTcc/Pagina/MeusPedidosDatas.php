@@ -15,7 +15,7 @@
     <div class="form-group">
       <div class="col-md-4">
         <form action="ListagemPorDataUsuario.php" method="POST">
-          <h4>Selecione a data do Cardápio</H4>
+          <h4>Selecione a data do seu pedido para consultar</H4>
           <input type="date" name="data_card" require>
           <h5><input type="submit" name="Procurar" value="Procurar"></h5>
         </form>
