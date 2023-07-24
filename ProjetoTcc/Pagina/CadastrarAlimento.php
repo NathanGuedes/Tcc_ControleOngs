@@ -12,4 +12,3 @@ $Cadastrar = mysqli_query($connection, $sql);
 
 echo "<a href='CadastroAlimento.php'><b>Cadastrar Alimento Novamente</b></a><br><br>";
 echo "<a href='HomeInstituicao.php'><b>Voltar para a Home</b></a><br><br>";
-?>

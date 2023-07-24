@@ -12,7 +12,7 @@ $sexo = $_POST["Sexo"];
 $nascimento = $_POST["DataDeNascimento"];
 $cep = $_POST["Cep"];
 $telefone = $_POST["Telefone"];
-$dependente= $_POST["q_dependente"];
+$dependente = $_POST["q_dependente"];
 
 
 
