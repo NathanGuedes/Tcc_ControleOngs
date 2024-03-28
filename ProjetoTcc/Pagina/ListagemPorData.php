@@ -12,7 +12,7 @@
 
 <body>
   <center>
-    <h1>Pedidos Realizados Por Data</h1>
+    <h1>Cardápios</h1>
   </center>
   <br><br>
   <?php
